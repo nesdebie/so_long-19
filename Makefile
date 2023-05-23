@@ -4,6 +4,7 @@ SRC = 	src/main.c \
 		src/utils.c \
 		src/exits.c \
 		src/steps_counter.c \
+		src/path_checker.c \
 		src/ft_mlx.c \
 		src/init_game.c \
 		src/init_img.c \

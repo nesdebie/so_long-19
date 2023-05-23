@@ -6,34 +6,11 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 20:06:05 by nedebies          #+#    #+#             */
-/*   Updated: 2023/05/23 10:15:28 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/05/23 12:17:35 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/so_long.h"
-
-int	check_path(t_game *game, int y, int x, int *exit)
-{
-	if (game->maps.coord[y][x] == '1')
-		return (0);
-	if (game->maps.coord[y][x] == 'C')
-		game->maps.cnt.collectible--;
-	if (game->maps.coord[y][x] == 'E')
-	{
-		*exit = 1;
-		return (0);
-	}
-	game->maps.coord[y][x] = '1';
-	if (check_path(game, y + 1, x, exit))
-		return (1);
-	if (check_path(game, y - 1, x, exit))
-		return (1);
-	if (check_path(game, y, x + 1, exit))
-		return (1);
-	if (check_path(game, y, x - 1, exit))
-		return (1);
-	return (0);
-}
 
 static void	init_compo_cnt(t_game *game)
 {
@@ -60,6 +37,7 @@ static void	check_compo_cnt(t_game *game, int x, int y)
 	if (game->maps.cnt.exit > 1)
 		ft_error("Too many exits.");
 	check_path(game, y, x, &valid_exit);
+	ft_checkclear(&(game->check));
 	if (!(valid_exit == 1 && game->maps.cnt.collectible == 0))
 		ft_error("No valid path");
 	game->maps.cnt.collectible = nb_collec;

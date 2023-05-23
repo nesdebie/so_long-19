@@ -6,7 +6,7 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 15:56:58 by nedebies          #+#    #+#             */
-/*   Updated: 2023/05/15 10:37:11 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/05/23 12:20:04 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,4 +59,5 @@ int	main(int argc, char **argv)
 	mlx_hook(game.win, 17, 0, &close_game, &game);
 	mlx_loop_hook(game.mlx, &so_long, &game);
 	mlx_loop(game.mlx);
+	return (0);
 }

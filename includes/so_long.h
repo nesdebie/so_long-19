@@ -6,7 +6,7 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 20:16:25 by nedebies          #+#    #+#             */
-/*   Updated: 2023/05/09 11:34:09 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/05/23 12:20:36 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,13 @@ typedef struct s_compo
 	int		exit;
 	int		collectible;
 }			t_compo;
+
+typedef struct s_check
+{
+	int				x;
+	int				y;
+	struct s_check	*next;
+}			t_check;
 
 typedef struct s_img
 {
@@ -130,6 +137,7 @@ typedef struct s_game
 	t_player	player;
 	t_coord		dir2coord[5];
 	t_map		maps;
+	t_check		*check;
 	t_flags		flag;
 }				t_game;
 
@@ -161,5 +169,8 @@ void	draw_map(t_game *game);
 void	draw_player(t_game *game);
 void	draw_step_count(t_game *game);
 void	draw_sprites(t_game *game);
+
+void	ft_checkclear(t_check **lst);
+int		check_path(t_game *game, int y, int x, int *exit);
 
 #endif
