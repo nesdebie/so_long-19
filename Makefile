@@ -1,4 +1,14 @@
-SRC = 	src/main.c \
+NAME = so_long
+
+RM = rm -rf
+
+CC = cc
+
+CFLAGS = -Wall -Wextra -Werror
+
+MLXFLAGS = -lmlx -framework OpenGL -framework AppKit
+
+SRCS = 	src/main.c \
 		src/char_checker.c \
 		src/sprites_drawer.c \
 		src/utils.c \
@@ -12,50 +22,23 @@ SRC = 	src/main.c \
 		src/map_reader.c \
 		src/map_drawer.c \
 		src/ft_move.c \
-		libft/ft_itoa.c \
-		libft/ft_calloc.c \
-		libft/ft_putchar_fd.c \
-		libft/ft_strchr.c \
-		libft/ft_bzero.c \
-		libft/ft_strjoin.c \
-		libft/ft_strlen.c \
-		libft/ft_strnstr.c \
-		libft/ft_putstr_fd.c \
-		libft/ft_putnbr_fd.c \
-		libft/ft_strdup.c \
-		libft/ft_strncmp.c \
+		get_next_line/get_next_line.c \
 		get_next_line/get_next_line_utils.c \
-		get_next_line/get_next_line.c 
-
-NAME = so_long
-
-CC = gcc
-
-CFLAGS = -Wall -Wextra -Werror
-
-MLXFLAGS = -lmlx -framework OpenGL -framework AppKit
-
-HEADER = ./includes/so_long.h
-
-OBJ = $(SRC:c=o)
+		libft/libft.a
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@$(CC) $(OBJ) $(MLXFLAGS) -o $(NAME)
-	@echo "Compilation completed and so_long is ready to use.\n"
-
-%.o: %.c
-	@${CC} ${CFLAGS} -Imlx -c $< -o $@
+	make all -C libft
+	$(CC) $(CFLAGS) $(MLXFLAGS) $(SRCS) -o $(NAME)
 
 clean:
-	@rm -f $(OBJ)
-	@echo "cleaned"
+	$(RM) $(OBJ)
+	make clean -C libft
 
-fclean:
-	@rm -f $(OBJ)
-	@rm -f $(NAME)
-	@echo "fcleaned"
+fclean: clean
+	rm -f $(NAME)
+	make clean -C libft
 
 re: fclean all
 

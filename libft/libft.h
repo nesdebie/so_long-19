@@ -6,7 +6,7 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 22:55:21 by nesdebie          #+#    #+#             */
-/*   Updated: 2023/04/03 10:47:53 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/05/23 13:28:19 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ char	*ft_strjoin(char const *str1, char const *str2);
 size_t	ft_strlcat(char *dest, char const *src, size_t n);
 size_t	ft_strlcpy(char *dest, char const *src, size_t n);
 size_t	ft_strlen(char const *str);
+int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(char const *s1, char const *s2, size_t n);
 char	*ft_strnstr(char const *str, char const *tofind, size_t n);
 char	*ft_strrchr(char const *str, int c);
