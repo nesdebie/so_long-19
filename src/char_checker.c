@@ -6,22 +6,21 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 20:06:05 by nedebies          #+#    #+#             */
-/*   Updated: 2023/05/16 10:08:32 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/05/23 10:15:28 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/so_long.h"
 
-int	check_path(t_game *game, int y, int x, int exit)
+int	check_path(t_game *game, int y, int x, int *exit)
 {
-
 	if (game->maps.coord[y][x] == '1')
 		return (0);
 	if (game->maps.coord[y][x] == 'C')
 		game->maps.cnt.collectible--;
 	if (game->maps.coord[y][x] == 'E')
 	{
-		exit = 1;
+		*exit = 1;
 		return (0);
 	}
 	game->maps.coord[y][x] = '1';
@@ -89,8 +88,8 @@ void	get_compo_coord(t_game *game)
 {
 	int	i;
 	int	j;
-	int x_p;
-	int y_p;
+	int	x_p;
+	int	y_p;
 
 	x_p = 0;
 	y_p = 0;
