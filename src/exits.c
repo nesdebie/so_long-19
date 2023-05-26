@@ -6,7 +6,7 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 19:56:57 by nedebies          #+#    #+#             */
-/*   Updated: 2023/05/26 16:55:46 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/05/26 17:01:20 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	check_event_exit(t_game *game)
 		ft_putendl_fd("Good job !", 1);
 		exit(EXIT_SUCCESS);
 	}
-	if (game->maps.coord[y][x] == 'X')
+	if (game->maps.coord[y][x] == 'X') //BONUS
 	{
 		ft_putendl_fd("YOU DIED.", 1);
 		exit(EXIT_FAILURE);

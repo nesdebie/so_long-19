@@ -6,7 +6,7 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 21:12:34 by nedebies          #+#    #+#             */
-/*   Updated: 2023/05/26 16:59:39 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/05/26 17:01:36 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void	print_step_count(t_game *game)
 	game->flag.step_cnt = 0;
 }
 
-void	draw_step_count(t_game *game)
+void	draw_step_count(t_game *game) // BONUS
 {
 	char	*str;
 

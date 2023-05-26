@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sprites_drawer.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nedebies <nedebies@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 21:03:53 by nedebies          #+#    #+#             */
-/*   Updated: 2022/07/07 16:11:43 by nedebies         ###   ########.fr       */
+/*   Updated: 2023/05/26 17:05:49 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	draw_sprites(t_game *game)
 	}
 }
 
-static t_img	*get_player_sprite(t_game *game, int dir)
+static t_img	*get_player_sprite(t_game *game, int dir) //BONUS
 {
 	t_img	*spr;
 
@@ -98,8 +98,8 @@ void	draw_player(t_game *game)
 
 	dir = game->player.spr.dir;
 	player = &(game->player.spr);
-	sprite = get_player_sprite(game, dir);
-	if (game->flag.player_walk)
+	sprite = get_player_sprite(game, dir); // BONUS
+	if (game->flag.player_walk) // BONUS
 		ft_walk(game, player, sprite, dir);
 	else
 		ft_put_img64(game, sprite->ptr, player->x, player->y - 1);

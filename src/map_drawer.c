@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map_drawer.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nedebies <nedebies@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 16:08:59 by nedebies          #+#    #+#             */
-/*   Updated: 2022/07/07 16:20:59 by nedebies         ###   ########.fr       */
+/*   Updated: 2023/05/26 17:04:02 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void	draw_map2(t_game *game, int i, int j)
 {
 	if (game->maps.coord[i][j] == '1')
 		ft_put_img64(game, game->tile.t1.ptr, j, i);
-	else if (game->maps.coord[i][j] == 'X')
+	else if (game->maps.coord[i][j] == 'X') //BONUS
 	{
 		ft_put_img64(game, game->tile.t0.ptr, j, i);
 		ft_put_img64(game, game->tile.tx.ptr, j, i);
