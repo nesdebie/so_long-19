@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   exits.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nedebies <nedebies@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 19:56:57 by nedebies          #+#    #+#             */
-/*   Updated: 2022/07/07 16:19:30 by nedebies         ###   ########.fr       */
+/*   Updated: 2023/05/26 16:55:46 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 void	ft_error(char *errmsg)
 {
-	ft_putstr_fd("Error\n", 2);
-	ft_putstr_fd(errmsg, 2);
-	ft_putstr_fd("\n", 2);
+	ft_putendl_fd("Error", 2);
+	ft_putendl_fd(errmsg, 2);
 	exit(1);
 }
 
@@ -36,12 +35,12 @@ void	check_event_exit(t_game *game)
 	if (game->maps.coord[y][x] == 'E'
 		&& game->flag.got_all && !game->flag.player_walk)
 	{
-		ft_putstr_fd("Good job !\n", 1);
+		ft_putendl_fd("Good job !", 1);
 		exit(EXIT_SUCCESS);
 	}
 	if (game->maps.coord[y][x] == 'X')
 	{
-		ft_putstr_fd("YOU DIED.\n", 1);
+		ft_putendl_fd("YOU DIED.", 1);
 		exit(EXIT_FAILURE);
 	}
 }

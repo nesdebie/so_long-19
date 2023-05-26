@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_move.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nedebies <nedebies@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 20:56:21 by nedebies          #+#    #+#             */
-/*   Updated: 2022/07/07 17:18:44 by nedebies         ###   ########.fr       */
+/*   Updated: 2023/05/26 16:56:04 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ static int	is_wall(t_game *game, t_spr *sprite, int dir)
 	c = game->maps.coord[sprite->y + y][sprite->x + x];
 	if (c == '1')
 	{
-		ft_putstr_fd("*BONK*\n", 1);
+		ft_putendl_fd("*BONK*", 1);
 		return (1);
 	}
 	else if (c == 'E' && !game->flag.got_all)
 	{
-		ft_putstr_fd("*BONK*\n", 1);
+		ft_putendl_fd("*BONK*", 1);
 		return (1);
 	}
 	return (0);
