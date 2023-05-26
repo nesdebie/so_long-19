@@ -6,7 +6,7 @@
 #    By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/08 09:54:51 by nedebies          #+#    #+#              #
-#    Updated: 2023/05/23 13:35:14 by nesdebie         ###   ########.fr        #
+#    Updated: 2023/05/19 13:07:38 by nesdebie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,9 @@ SRCS 	=	ft_atoi.c\
 		ft_putendl_fd.c\
 		ft_putnbr_fd.c\
 		ft_putstr_fd.c\
-		ft_strcmp.c
+		ft_strcmp.c \
+		get_next_line_bonus.c \
+		get_next_line_utils_bonus.c
 
 BONUS		= ft_lstadd_back_bonus.c\
 				  ft_lstadd_front_bonus.c\

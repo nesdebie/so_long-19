@@ -1,27 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/10 16:53:20 by nesdebie          #+#    #+#             */
-/*   Updated: 2023/05/15 10:46:10 by nesdebie         ###   ########.fr       */
+/*   Created: 2023/04/10 16:53:06 by nesdebie          #+#    #+#             */
+/*   Updated: 2023/05/19 13:01:11 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
-# include <stdlib.h>
-# include <unistd.h>
-# include "../libft/libft.h"
+#include "libft.h"
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 42
-# endif
+char	*ft_strjoingnl(char *s1, char *s2)
+{
+	size_t	i;
+	size_t	j;
+	char	*result;
 
-char	*ft_strjoin_free(char *s1, char *s2);
-
-char	*ft_free(char *s1, char *s2);
-char	*get_next_line(int fd, char **line);
-#endif
+	j = 0;
+	i = ft_strlen(s1);
+	result = (char *)malloc((i + ft_strlen(s2) + 1) * sizeof(char));
+	if (!result)
+		return (ft_free(s1, 0));
+	while (s1[j])
+	{
+		result[j] = s1[j];
+		j++;
+	}
+	i = 0;
+	while (s2[i])
+	{
+		result[j] = s2[i];
+		i++;
+		j++;
+	}
+	result[j] = 0;
+	free(s1);
+	return (result);
+}

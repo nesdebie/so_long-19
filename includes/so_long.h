@@ -6,7 +6,7 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 20:16:25 by nedebies          #+#    #+#             */
-/*   Updated: 2023/05/23 13:26:56 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/05/26 16:45:18 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 # include <fcntl.h>
 # include <mlx.h>
 # include "../libft/libft.h"
-# include "../get_next_line/get_next_line.h"
 
 # define NO_MOVE	0
 # define DOWN		1
