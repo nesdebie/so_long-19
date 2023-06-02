@@ -6,7 +6,7 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 20:18:42 by nedebies          #+#    #+#             */
-/*   Updated: 2023/05/26 17:03:31 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/06/02 13:03:34 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	check_map_compo(char c)
 {
 	if (c == '0' || c == '1' || c == 'C')
 		return (1);
-	else if (c == 'E' || c == 'P' || c == 'X')  //BONUS ('X')
+	else if (c == 'E' || c == 'P' || c == 'X')
 		return (1);
 	return (0);
 }

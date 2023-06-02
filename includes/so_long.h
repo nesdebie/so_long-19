@@ -6,7 +6,7 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 20:16:25 by nedebies          #+#    #+#             */
-/*   Updated: 2023/05/26 16:45:18 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/06/02 14:05:45 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,9 @@
 # define KEY_A	0
 # define KEY_S	1
 # define KEY_D	2
+
+# define RED_CROSS 17
+# define KEYBOARD_CODE 2
 
 # define PLAYER_SPEED	4
 

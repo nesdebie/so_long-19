@@ -6,7 +6,7 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 15:56:58 by nedebies          #+#    #+#             */
-/*   Updated: 2023/05/23 12:20:04 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/06/02 14:05:33 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int	deal_key(int key_code, t_game *game)
 {
 	if (key_code == KEY_ESC)
-		exit(0);
+		close_game(game);
 	else if (!game->flag.held_keys)
 	{
 		if (key_code == KEY_W)
@@ -55,8 +55,8 @@ int	main(int argc, char **argv)
 	game.collec.clst = NULL;
 	file_read(&game, argv[1]);
 	init_game(&game);
-	mlx_hook(game.win, 2, 0, &deal_key, &game);
-	mlx_hook(game.win, 17, 0, &close_game, &game);
+	mlx_hook(game.win, KEYBOARD_CODE, 0, &deal_key, &game);
+	mlx_hook(game.win, RED_CROSS, 0, &close_game, &game);
 	mlx_loop_hook(game.mlx, &so_long, &game);
 	mlx_loop(game.mlx);
 	return (0);
