@@ -6,7 +6,7 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 20:51:32 by nedebies          #+#    #+#             */
-/*   Updated: 2023/06/02 13:03:29 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/06/02 14:27:50 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,11 @@ void	init_img(t_game *game)
 
 	game->tile.t0.ptr = ft_xpm_to_img(game, "./img/ground.xpm");
 	game->tile.t1.ptr = ft_xpm_to_img(game, "./img/wall.xpm");
-	game->tile.te.ptr = ft_xpm_to_img(game, "./img/collectible.xpm");
+	game->tile.te.ptr = ft_xpm_to_img(game, "./img/exit.xpm");
 	game->tile.t_count.ptr = ft_xpm_to_img(game, "./img/wooden_sign.xpm");
 	game->tile.t_blocked.ptr = ft_xpm_to_img(game, "./img/stone.xpm");
 	game->tile.tx.ptr = ft_xpm_to_img(game, "./img/enemy.xpm");
+	game->collec.coll.ptr = ft_xpm_to_img(game, "./img/collectible.xpm");
 	ply = &(game->player.spr);
 	ply->imgx[UP][0].ptr = ft_xpm_to_img(game, "./img/up0.xpm");
 	ply->imgx[UP][1].ptr = ft_xpm_to_img(game, "./img/up1.xpm");
@@ -35,5 +36,4 @@ void	init_img(t_game *game)
 	ply->imgx[RIGHT][0].ptr = ft_xpm_to_img(game, "./img/right0.xpm");
 	ply->imgx[RIGHT][1].ptr = ft_xpm_to_img(game, "./img/right1.xpm");
 	ply->imgx[RIGHT][2].ptr = ft_xpm_to_img(game, "./img/right2.xpm");
-	game->collec.coll.ptr = ft_xpm_to_img(game, "./img/cerbyllin.xpm");
 }
