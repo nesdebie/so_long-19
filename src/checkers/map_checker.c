@@ -6,11 +6,11 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 20:18:42 by nedebies          #+#    #+#             */
-/*   Updated: 2023/06/02 13:03:34 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/06/02 14:42:02 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/so_long.h"
+#include "../../includes/so_long.h"
 
 int	check_map_compo(char c)
 {

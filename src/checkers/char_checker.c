@@ -6,11 +6,11 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 20:06:05 by nedebies          #+#    #+#             */
-/*   Updated: 2023/06/02 13:03:16 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/06/02 14:41:48 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/so_long.h"
+#include "../../includes/so_long.h"
 
 static void	init_compo_cnt(t_game *game)
 {

@@ -6,11 +6,11 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 21:12:34 by nedebies          #+#    #+#             */
-/*   Updated: 2023/06/02 13:41:35 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/06/02 14:47:21 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/so_long.h"
+#include "../../includes/so_long.h"
 
 static void	print_step_count(t_game *game)
 {

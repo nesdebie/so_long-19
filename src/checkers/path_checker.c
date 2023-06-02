@@ -6,11 +6,11 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 12:16:46 by nesdebie          #+#    #+#             */
-/*   Updated: 2023/06/02 13:03:42 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/06/02 14:42:16 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/so_long.h"
+#include "../../includes/so_long.h"
 
 void	ft_checkclear(t_check **lst)
 {

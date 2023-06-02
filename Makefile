@@ -1,19 +1,19 @@
 NAME = so_long
 
 SRCS = 	src/main.c \
-		src/char_checker.c \
-		src/path_checker.c \
-		src/sprites_drawer.c \
+		src/checkers/char_checker.c \
+		src/checkers/path_checker.c \
+		src/drawers/sprites_drawer.c \
 		src/utils.c \
 		src/exits.c \
-		src/steps_counter.c \
-		src/ft_mlx.c \
-		src/init_game.c \
-		src/init_img.c \
-		src/map_checker.c \
-		src/map_reader.c \
-		src/map_drawer.c \
-		src/ft_move.c
+		src/drawers/steps_counter.c \
+		src/drawers/ft_mlx.c \
+		src/init_files/init_game.c \
+		src/init_files/init_img.c \
+		src/checkers/map_checker.c \
+		src/checkers/map_reader.c \
+		src/drawers/map_drawer.c \
+		src/drawers/ft_move.c
 
 OBJS 	= $(SRCS:.c=.o)
 

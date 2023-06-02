@@ -6,11 +6,11 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 20:16:18 by nedebies          #+#    #+#             */
-/*   Updated: 2023/05/09 11:34:00 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/06/02 14:43:30 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/so_long.h"
+#include "../../includes/so_long.h"
 
 static void	init_dir(t_game *game)
 {

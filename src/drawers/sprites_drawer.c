@@ -6,11 +6,11 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 21:03:53 by nedebies          #+#    #+#             */
-/*   Updated: 2023/06/02 14:23:14 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/06/02 14:47:17 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/so_long.h"
+#include "../../includes/so_long.h"
 
 void	draw_collect(t_game *game)
 {

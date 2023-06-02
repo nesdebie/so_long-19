@@ -6,11 +6,11 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 20:56:21 by nedebies          #+#    #+#             */
-/*   Updated: 2023/06/02 13:03:23 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/06/02 14:47:09 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/so_long.h"
+#include "../../includes/so_long.h"
 
 static int	is_wall(t_game *game, t_spr *sprite, int dir)
 {

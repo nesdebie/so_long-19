@@ -6,11 +6,11 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 20:51:32 by nedebies          #+#    #+#             */
-/*   Updated: 2023/06/02 14:27:50 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/06/02 14:43:37 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/so_long.h"
+#include "../../includes/so_long.h"
 
 void	init_img(t_game *game)
 {

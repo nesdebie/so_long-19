@@ -6,11 +6,11 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 21:07:51 by nedebies          #+#    #+#             */
-/*   Updated: 2023/06/02 13:03:21 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/06/02 14:46:59 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/so_long.h"
+#include "../../includes/so_long.h"
 
 void	*ft_xpm_to_img(t_game *game, char *str)
 {

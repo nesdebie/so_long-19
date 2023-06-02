@@ -6,11 +6,11 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 16:08:59 by nedebies          #+#    #+#             */
-/*   Updated: 2023/06/02 13:03:36 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/06/02 14:47:14 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/so_long.h"
+#include "../../includes/so_long.h"
 
 static void	draw_map2(t_game *game, int i, int j)
 {

@@ -6,11 +6,11 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 20:16:32 by nedebies          #+#    #+#             */
-/*   Updated: 2023/06/02 13:03:39 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/06/02 14:44:30 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/so_long.h"
+#include "../../includes/so_long.h"
 
 static int	open_file(char *filename)
 {
