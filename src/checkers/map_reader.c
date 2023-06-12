@@ -6,7 +6,7 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/03 18:06:21 by nesdebie          #+#    #+#             */
-/*   Updated: 2023/06/03 18:06:35 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/06/12 16:10:32 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,17 @@ static void	map_malloc(t_game *game, int fd)
 
 	count_max_rows_cols(game, fd);
 	game->maps.coord = (char **)malloc(sizeof(char *) * (game->maps.rows));
+	if (!game->maps.coord)
+		exit(0);
 	i = 0;
 	while (i < game->maps.rows)
 	{
 		game->maps.coord[i] = (char *)malloc(sizeof(char) * (game->maps.cols));
+		if (!game->maps.coord[i])
+		{
+			ft_free_arr(game->maps.coord, i);
+			exit(0);
+		}
 		i++;
 	}
 }

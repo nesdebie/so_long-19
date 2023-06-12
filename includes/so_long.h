@@ -6,7 +6,7 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/03 17:59:10 by nesdebie          #+#    #+#             */
-/*   Updated: 2023/06/03 18:01:40 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/06/12 16:08:08 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -172,6 +172,7 @@ void	draw_player(t_game *game);
 void	draw_step_count(t_game *game);
 void	draw_sprites(t_game *game);
 
+char	**ft_free_arr(char **arr, int j);
 void	ft_checkclear(t_check **lst);
 int		check_path(t_game *game, int y, int x, int *exit);
 

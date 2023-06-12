@@ -6,11 +6,29 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/03 18:01:13 by nesdebie          #+#    #+#             */
-/*   Updated: 2023/06/03 18:01:44 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/06/12 16:13:17 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/so_long.h"
+
+char	**ft_free_arr(char **arr, int j)
+{
+	if (j != -1)
+	{
+		while (j != 0)
+			free(arr[--j]);
+	}
+	else
+	{
+		while (arr[j])
+			j++;
+		while (j != 0)
+			free(arr[--j]);
+	}
+	free(arr);
+	return (NULL);
+}
 
 void	ft_error(char *errmsg)
 {
@@ -37,8 +55,10 @@ static void	ft_free_coll(t_clst **coll)
 
 int	close_game(t_game *game)
 {
-	ft_free_coll(&game->collec.clst);
-	mlx_destroy_window(game->mlx, game->win);
+	if (game->collec.clst)
+		ft_free_coll(&game->collec.clst);
+	if (game->mlx && game->win)
+		mlx_destroy_window(game->mlx, game->win);
 	exit(EXIT_SUCCESS);
 }
 

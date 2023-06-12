@@ -36,7 +36,7 @@ $(NAME):	$(OBJS)
 bonus:		$(OBJS_B)
 	rm -f $(OBJS)
 	make re -C ./libft
-	$(CC) $(OBJS_B) -Llibft -lft -o $(NAME)
+	$(CC) $(OBJS) $(MLXFLAGS) -Llibft -lft -o $(NAME)
 
 clean:
 	make clean -C ./libft
@@ -48,4 +48,4 @@ fclean: 	clean
 
 re:			fclean all
 
-re_bonus:	all clean fclean re bonus
+.PHONY:	all clean fclean re bonus
