@@ -6,7 +6,7 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/03 18:07:04 by nesdebie          #+#    #+#             */
-/*   Updated: 2023/06/13 13:42:08 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/06/13 13:46:42 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,7 @@ void	*ft_xpm_to_img(t_game *game, char *str)
 	img = mlx_xpm_file_to_image(game->mlx, str,
 			&(game->img64.w), &(game->img64.h));
 	if (!img)
-	{
-		ft_free_arr(game->maps.coord, -1);
 		ft_error("mlx_xpm_file_to_image failed.");
-	}
 	return (img);
 }
 
