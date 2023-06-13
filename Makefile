@@ -15,7 +15,31 @@ SRCS = 	src/main.c \
 		src/drawers/map_drawer.c \
 		src/drawers/ft_move.c
 
+SRCS_B = 	src/main.c \
+			src/checkers/char_checker.c \
+			src/checkers/path_checker.c \
+			src/drawers/sprites_drawer.c \
+			src/utils.c \
+			src/exits_bonus.c \
+			src/drawers/steps_counter.c \
+			src/drawers/ft_mlx.c \
+			src/init_files/init_game.c \
+			src/init_files/init_img_bonus.c \
+			src/checkers/map_checker_bonus.c \
+			src/checkers/map_reader.c \
+			src/drawers/map_drawer_bonus.c \
+			src/drawers/ft_move.c
+
+SRCS_C =	src/exits.c \
+			src/init_img.c \
+			src/map_checker.c \
+			src/map_drawer.c
+
 OBJS 	= $(SRCS:.c=.o)
+
+OBJS_B 	= $(SRCS_B:.c=.o)
+
+OBJS_C 	= $(SRCS_C:.c=.o)
 
 CC 		= cc
 
@@ -34,9 +58,9 @@ $(NAME):	$(OBJS)
 
 
 bonus:		$(OBJS_B)
-	rm -f $(OBJS)
+	rm -f $(OBJS_C)
 	make re -C ./libft
-	$(CC) $(OBJS) $(MLXFLAGS) -Llibft -lft -o $(NAME)
+	$(CC) $(OBJS_B) $(MLXFLAGS) -Llibft -lft -o $(NAME)
 
 clean:
 	make clean -C ./libft

@@ -6,7 +6,7 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/03 18:03:04 by nesdebie          #+#    #+#             */
-/*   Updated: 2023/06/13 10:59:36 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/06/03 18:03:14 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	init_img(t_game *game)
 	game->tile.te.ptr = ft_xpm_to_img(game, "./img/exit.xpm");
 	game->tile.t_count.ptr = ft_xpm_to_img(game, "./img/wooden_sign.xpm");
 	game->tile.t_blocked.ptr = ft_xpm_to_img(game, "./img/stone.xpm");
+	game->tile.tx.ptr = ft_xpm_to_img(game, "./img/enemy.xpm");
 	game->collec.coll.ptr = ft_xpm_to_img(game, "./img/collectible.xpm");
 	ply = &(game->player.spr);
 	ply->imgx[UP][0].ptr = ft_xpm_to_img(game, "./img/up0.xpm");

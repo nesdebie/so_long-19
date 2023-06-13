@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   map_drawer.c                                       :+:      :+:    :+:   */
+/*   map_drawer_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/03 18:08:01 by nesdebie          #+#    #+#             */
-/*   Updated: 2023/06/13 10:59:03 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/06/13 11:48:58 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@ static void	draw_map2(t_game *game, int i, int j)
 {
 	if (game->maps.coord[i][j] == '1')
 		ft_put_img64(game, game->tile.t1.ptr, j, i);
+	else if (game->maps.coord[i][j] == 'X')
+	{
+		ft_put_img64(game, game->tile.t0.ptr, j, i);
+		ft_put_img64(game, game->tile.tx.ptr, j, i);
+	}
 	else if (game->maps.coord[i][j] == 'E')
 	{
 		if (game->flag.got_all)

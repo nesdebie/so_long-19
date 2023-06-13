@@ -6,7 +6,7 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/03 17:59:10 by nesdebie          #+#    #+#             */
-/*   Updated: 2023/06/12 16:08:08 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/06/13 11:49:20 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,9 +87,9 @@ typedef struct s_tile
 	t_img	t0;
 	t_img	t1;
 	t_img	te;
+	t_img	tx;
 	t_img	t_count;
 	t_img	t_blocked;
-	t_img	tx;
 }			t_tile;
 
 typedef struct s_coll
