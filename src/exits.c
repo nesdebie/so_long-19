@@ -6,7 +6,7 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/03 18:01:13 by nesdebie          #+#    #+#             */
-/*   Updated: 2023/06/13 10:57:15 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/06/13 12:30:49 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ char	**ft_free_arr(char **arr, int j)
 			free(arr[--j]);
 	}
 	free(arr);
+	arr = NULL;
 	return (NULL);
 }
 
