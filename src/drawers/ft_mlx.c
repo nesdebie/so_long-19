@@ -6,7 +6,7 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/03 18:07:04 by nesdebie          #+#    #+#             */
-/*   Updated: 2023/06/13 12:26:10 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/06/13 13:42:08 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,19 @@ void	*ft_xpm_to_img(t_game *game, char *str)
 
 void	ft_put_img64(t_game *game, void *img_ptr, int x, int y)
 {
-	mlx_put_image_to_window(game->mlx, game->win,
-		img_ptr, x * TILE_SIZE, y * TILE_SIZE);
+	int	mlx;
+
+	mlx = mlx_put_image_to_window(game->mlx, game->win,
+			img_ptr, x * TILE_SIZE, y * TILE_SIZE);
+	if (!mlx)
+		close_game(game);
 }
 
 void	ft_put_img(t_game *game, void *img_ptr, int x, int y)
 {
-	mlx_put_image_to_window(game->mlx, game->win, img_ptr, x, y);
+	int	mlx;
+
+	mlx = mlx_put_image_to_window(game->mlx, game->win, img_ptr, x, y);
+	if (!mlx)
+		close_game(game);
 }
