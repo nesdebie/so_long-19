@@ -31,9 +31,9 @@ SRCS_B = 	src/main.c \
 			src/drawers/ft_move.c
 
 SRCS_C =	src/exits.c \
-			src/init_img.c \
-			src/map_checker.c \
-			src/map_drawer.c
+			src/init_files/init_img.c \
+			src/checkers/map_checker.c \
+			src/drawers/map_drawer.c
 
 OBJS 	= $(SRCS:.c=.o)
 
