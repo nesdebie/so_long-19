@@ -17,7 +17,7 @@ SRCS = 	src/main.c \
 
 SRCS_B = 	src/main.c \
 			src/checkers/char_checker.c \
-			src/checkers/path_checker.c \
+			src/checkers/path_checker_bonus.c \
 			src/drawers/sprites_drawer.c \
 			src/utils.c \
 			src/exits_bonus.c \
@@ -33,6 +33,7 @@ SRCS_B = 	src/main.c \
 SRCS_C =	src/exits.c \
 			src/init_files/init_img.c \
 			src/checkers/map_checker.c \
+			src/checkers/path_checker.c \
 			src/drawers/map_drawer.c
 
 OBJS 	= $(SRCS:.c=.o)
