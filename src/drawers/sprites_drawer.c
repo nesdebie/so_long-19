@@ -6,7 +6,7 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/03 18:08:31 by nesdebie          #+#    #+#             */
-/*   Updated: 2023/06/13 14:45:03 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/06/14 15:27:48 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ static void	ft_walk(t_game *game, t_spr *player, t_img *sprite, int dir)
 		+ (game->dir2coord[dir].y * player->i * player->move);
 	ft_put_img(game, sprite->ptr, x, y);
 	player->i += PLAYER_SPEED;
-	if (player->i >= 64)
+	if (player->i >= TILE_SIZE)
 	{
 		player->i = 0;
 		game->player.spr.frame++;
