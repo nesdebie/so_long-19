@@ -46,7 +46,7 @@ CC 		= cc
 
 CFLAGS 	= -Wall -Wextra -Werror
 
-MLXFLAGS = -lmlx -framework OpenGL -framework AppKit
+MLXFLAGS = -lmlx -framework OpenGL -framework AppKit -Lmlx
 
 .c.o:		%.o : %.c
 	@${CC} ${CFLAGS} -Imlx -c $< -o $@
@@ -54,17 +54,20 @@ MLXFLAGS = -lmlx -framework OpenGL -framework AppKit
 all: 		$(NAME)
 
 $(NAME):	$(OBJS)
-	make re -C ./libft
+	make -C ./libft
+	make -C ./mlx
 	$(CC) $(OBJS) $(MLXFLAGS) -Llibft -lft -o $(NAME)
 
 
 bonus:		$(OBJS_B)
 	rm -f $(OBJS_C)
 	make re -C ./libft
+	make -C ./mlx
 	$(CC) $(OBJS_B) $(MLXFLAGS) -Llibft -lft -o $(NAME)
 
 clean:
 	make clean -C ./libft
+	make clean -C ./mlx
 	rm -f $(OBJS) $(OBJS_B)
 
 fclean: 	clean

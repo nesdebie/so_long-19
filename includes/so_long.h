@@ -6,7 +6,7 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/03 17:59:10 by nesdebie          #+#    #+#             */
-/*   Updated: 2023/06/13 14:44:45 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/10/19 13:00:24 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <string.h>
 # include <unistd.h>
 # include <fcntl.h>
-# include <mlx.h>
+# include "../mlx/mlx.h"
 # include "../libft/libft.h"
 
 # define NO_MOVE	0
